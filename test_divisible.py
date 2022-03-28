@@ -1,14 +1,18 @@
 import divisible
 import pytest
-def test_div8():
-    a = 16
-    res = divisible.div_8(a)
+@pytest.fixture
+def input():
+    x = 16
+    return x
+
+def test_div8(input):
+    res = divisible.div_8(input)
     assert res == True
-def test_div9():
-    a = 54
-    result = divisible.div_9(a)
+
+def test_div9(input):
+    result = divisible.div_9(input)
     assert  result == True
-def test_div10():
-    a = 1000
-    result = divisible.div_10(a)
+
+def test_div10(input):
+    result = divisible.div_10(input)
     assert result == True
